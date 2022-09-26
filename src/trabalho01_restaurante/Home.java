@@ -56,6 +56,7 @@ public class Home extends javax.swing.JFrame {
         jlRestaurante = new javax.swing.JLabel();
         btnLogout = new javax.swing.JButton();
         btnFechar = new javax.swing.JButton();
+        iconAddPedido2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Menu");
@@ -338,6 +339,11 @@ public class Home extends javax.swing.JFrame {
 
         btnLogout.setFont(new java.awt.Font("Segoe UI Light", 0, 18)); // NOI18N
         btnLogout.setText("Logout");
+        btnLogout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLogoutActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnLogout, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 580, -1, -1));
 
         btnFechar.setFont(new java.awt.Font("Segoe UI Light", 0, 18)); // NOI18N
@@ -348,6 +354,11 @@ public class Home extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnFechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 580, -1, -1));
+
+        iconAddPedido2.setForeground(new java.awt.Color(39, 39, 39));
+        iconAddPedido2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        iconAddPedido2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalho01_restaurante/imagens/servindo-comida.png"))); // NOI18N
+        getContentPane().add(iconAddPedido2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 30, 90, 90));
 
         pack();
         setLocationRelativeTo(null);
@@ -360,6 +371,11 @@ public class Home extends javax.swing.JFrame {
     private void btnFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFecharActionPerformed
         System.exit(0);
     }//GEN-LAST:event_btnFecharActionPerformed
+
+    private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
+        this.dispose();
+        new Login().setVisible(true);
+    }//GEN-LAST:event_btnLogoutActionPerformed
 
     /**
      * @param args the command line arguments
@@ -391,7 +407,7 @@ public class Home extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Home().setVisible(true);
+                new Login().setVisible(true);
             }
         });
     }
@@ -402,6 +418,7 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JButton btnFecharPedido;
     private javax.swing.JButton btnLogout;
     private javax.swing.JLabel iconAddPedido;
+    private javax.swing.JLabel iconAddPedido2;
     private javax.swing.JLabel iconAddProduto;
     private javax.swing.JLabel iconCardapio;
     private javax.swing.JLabel iconCliente;
