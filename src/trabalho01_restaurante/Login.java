@@ -7,7 +7,7 @@ package trabalho01_restaurante;
 
 /**
  *
- * @author PICHAU
+ * @author ALEX e LUAN
  */
 public class Login extends javax.swing.JFrame {
 
