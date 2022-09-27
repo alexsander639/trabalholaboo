@@ -3,7 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package trabalho01_restaurante;
+package trabalho01_restaurante.dados;
+
+import trabalho01_restaurante.interfaces.CalculoProduto;
 
 /**
  *

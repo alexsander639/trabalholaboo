@@ -3,9 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package trabalho01_restaurante;
+package trabalho01_restaurante.dados;
 
-import java.util.ArrayList;
+import trabalho01_restaurante.interfaces.ManipulacaoPedido;
+import java.util.List;
 
 /**
  *
@@ -14,11 +15,11 @@ import java.util.ArrayList;
 public class Pedido implements ManipulacaoPedido{
     private int codPedido;
     private String formaPagamento;
-    private ArrayList<Produto> produtos;
+    private List<Produto> produtos;
     private double precoTotal;
     private double troco;
 
-    public Pedido(int codPedido, String formaPagamento, ArrayList<Produto> produtos, double precoTotal, double troco) {
+    public Pedido(int codPedido, String formaPagamento, List<Produto> produtos, double precoTotal, double troco) {
         this.codPedido = codPedido;
         this.formaPagamento = formaPagamento;
         this.produtos = produtos;
@@ -27,7 +28,7 @@ public class Pedido implements ManipulacaoPedido{
     }
 
     @Override
-    public double calculaPrecoTotal(ArrayList<Produto> produtos) {
+    public double calculaPrecoTotal(List<Produto> produtos) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

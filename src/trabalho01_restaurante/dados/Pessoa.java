@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package trabalho01_restaurante;
+package trabalho01_restaurante.dados;
 
 import java.util.Date;
 
@@ -16,12 +16,14 @@ public class Pessoa {
     private String cpf;
     private Date dataNascimento;
     private int telefone;
+    private String endereco;
 
-    public Pessoa(String nome, String cpf, Date dataNascimento, int telefone) {
+    public Pessoa(String nome, String cpf, Date dataNascimento, int telefone, String endereco) {
         this.nome = nome;
         this.cpf = cpf;
         this.dataNascimento = dataNascimento;
         this.telefone = telefone;
+        this.endereco = endereco;
     }
     
     

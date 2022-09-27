@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package trabalho01_restaurante;
+package trabalho01_restaurante.dados;
 
 import java.util.Date;
 
@@ -14,8 +14,8 @@ import java.util.Date;
 public class Cliente extends Pessoa{
     private int codCliente;
 
-    public Cliente(int codCliente, String nome, String cpf, Date dataNascimento, int telefone) {
-        super(nome, cpf, dataNascimento, telefone);
+    public Cliente(int codCliente, String nome, String cpf, Date dataNascimento, int telefone, String endereco) {
+        super(nome, cpf, dataNascimento, telefone, endereco);
         this.codCliente = codCliente;
     }
     

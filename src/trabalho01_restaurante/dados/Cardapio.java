@@ -3,19 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package trabalho01_restaurante;
+package trabalho01_restaurante.dados;
 
-import java.util.ArrayList;
+import trabalho01_restaurante.interfaces.AdicionarProduto;
+import java.util.List;
 
 /**
  *
  * @author ALEX e LUAN
  */
-public class Cardapio implements AdicaoCardapio{
+public class Cardapio implements AdicionarProduto{
     private int codCardapio;
-    private ArrayList<Produto> produtos;
+    private List<Produto> produtos;
 
-    public Cardapio(int codCardapio, ArrayList<Produto> produtos) {
+    public Cardapio(int codCardapio, List<Produto> produtos) {
         this.codCardapio = codCardapio;
         this.produtos = produtos;
     }

@@ -3,16 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package trabalho01_restaurante;
+package trabalho01_restaurante.interfaces;
 
-import java.util.ArrayList;
+import trabalho01_restaurante.dados.Produto;
+
 
 /**
  *
  * @author ALEX e LUAN
  */
-public interface ManipulacaoPedido {
-    public double calculaPrecoTotal(ArrayList<Produto> produtos);
+public interface AdicionarProduto {
     public void addProduto(Produto produto);
-    public double calculaTroco();
 }
