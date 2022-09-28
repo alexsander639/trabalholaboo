@@ -14,6 +14,5 @@ import trabalho01_restaurante.dados.Produto;
  */
 public interface ManipulacaoPedido {
     public double calculaPrecoTotal(List<Produto> produtos);
-    public void addProduto(Produto produto);
     public double calculaTroco();
 }

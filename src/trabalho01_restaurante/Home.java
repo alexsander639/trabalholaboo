@@ -169,6 +169,11 @@ public class Home extends javax.swing.JFrame {
         jpMenuLateral.add(jpAddProduto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 290, 260, 40));
 
         jpClientes.setBackground(new java.awt.Color(254, 131, 131));
+        jpClientes.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jpClientesMouseClicked(evt);
+            }
+        });
 
         jlClientes.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jlClientes.setForeground(new java.awt.Color(39, 39, 39));
@@ -376,6 +381,10 @@ public class Home extends javax.swing.JFrame {
         this.dispose();
         new Login().setVisible(true);
     }//GEN-LAST:event_btnLogoutActionPerformed
+
+    private void jpClientesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpClientesMouseClicked
+        new Cliente().setVisible(true);
+    }//GEN-LAST:event_jpClientesMouseClicked
 
     /**
      * @param args the command line arguments

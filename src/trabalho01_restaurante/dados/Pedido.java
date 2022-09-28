@@ -7,12 +7,13 @@ package trabalho01_restaurante.dados;
 
 import trabalho01_restaurante.interfaces.ManipulacaoPedido;
 import java.util.List;
+import trabalho01_restaurante.interfaces.AdicionarProduto;
 
 /**
  *
  * @author ALEX e LUAN
  */
-public class Pedido implements ManipulacaoPedido{
+public class Pedido implements ManipulacaoPedido, AdicionarProduto{
     private int codPedido;
     private String formaPagamento;
     private List<Produto> produtos;
@@ -33,12 +34,12 @@ public class Pedido implements ManipulacaoPedido{
     }
 
     @Override
-    public void addProduto(Produto produto) {
+    public double calculaTroco() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public double calculaTroco() {
+    public void addProduto(Produto produto) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
