@@ -15,6 +15,8 @@ import trabalho01_restaurante.interfaces.AdicionarProduto;
  */
 public class Pedido implements ManipulacaoPedido, AdicionarProduto{
     private int codPedido;
+    private Cliente cliente;
+    private Funcionario funcionario;
     private String formaPagamento;
     private List<Produto> produtos;
     private double precoTotal;

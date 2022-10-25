@@ -14,6 +14,7 @@ import java.util.List;
  */
 public class Cardapio implements AdicionarProduto{
     private int codCardapio;
+    private Administrador administrador;
     private List<Produto> produtos;
 
     public Cardapio(int codCardapio, List<Produto> produtos) {

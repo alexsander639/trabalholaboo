@@ -68,6 +68,11 @@ public class Home extends javax.swing.JFrame {
         jpMenuLateral.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jpCardapio.setBackground(new java.awt.Color(254, 131, 131));
+        jpCardapio.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jpCardapioMouseClicked(evt);
+            }
+        });
 
         jlCardapio.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jlCardapio.setForeground(new java.awt.Color(39, 39, 39));
@@ -137,6 +142,11 @@ public class Home extends javax.swing.JFrame {
         jpMenuLateral.add(jpAddPedido, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 260, 40));
 
         jpAddProduto.setBackground(new java.awt.Color(254, 131, 131));
+        jpAddProduto.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jpAddProdutoMouseClicked(evt);
+            }
+        });
 
         jlAdicionarProduto.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jlAdicionarProduto.setForeground(new java.awt.Color(39, 39, 39));
@@ -206,6 +216,11 @@ public class Home extends javax.swing.JFrame {
         jpMenuLateral.add(jpClientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 360, 260, 40));
 
         jpFuncionarios.setBackground(new java.awt.Color(254, 131, 131));
+        jpFuncionarios.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jpFuncionariosMouseClicked(evt);
+            }
+        });
 
         jlFuncionarios.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jlFuncionarios.setForeground(new java.awt.Color(39, 39, 39));
@@ -242,6 +257,11 @@ public class Home extends javax.swing.JFrame {
         jpMenuLateral.add(jlMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(87, 50, -1, -1));
 
         jpSobre.setBackground(new java.awt.Color(254, 131, 131));
+        jpSobre.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jpSobreMouseClicked(evt);
+            }
+        });
 
         jlSobre.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jlSobre.setForeground(new java.awt.Color(39, 39, 39));
@@ -323,12 +343,14 @@ public class Home extends javax.swing.JFrame {
         jlPedidos.setText("Pedidos");
         jpPedidos.add(jlPedidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
 
+        btnFecharPedido.setBackground(new java.awt.Color(194, 44, 44));
         btnFecharPedido.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         btnFecharPedido.setForeground(new java.awt.Color(39, 39, 39));
         btnFecharPedido.setText("Fechar Pedido");
         btnFecharPedido.setEnabled(false);
         jpPedidos.add(btnFecharPedido, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 360, -1, -1));
 
+        btnAlterarPedido.setBackground(new java.awt.Color(194, 44, 44));
         btnAlterarPedido.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         btnAlterarPedido.setForeground(new java.awt.Color(39, 39, 39));
         btnAlterarPedido.setText("Alterar Pedido");
@@ -370,7 +392,7 @@ public class Home extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jpAddPedidoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpAddPedidoMouseClicked
-        System.out.println("Cliquei em Adicionar Pedido");
+        new CadastroPedido().setVisible(true);
     }//GEN-LAST:event_jpAddPedidoMouseClicked
 
     private void btnFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFecharActionPerformed
@@ -383,8 +405,24 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLogoutActionPerformed
 
     private void jpClientesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpClientesMouseClicked
-        new Cliente().setVisible(true);
+        new CadastroCliente().setVisible(true);
     }//GEN-LAST:event_jpClientesMouseClicked
+
+    private void jpFuncionariosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpFuncionariosMouseClicked
+        new CadastroFuncionario().setVisible(true);
+    }//GEN-LAST:event_jpFuncionariosMouseClicked
+
+    private void jpAddProdutoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpAddProdutoMouseClicked
+        new CadastroProduto().setVisible(true);
+    }//GEN-LAST:event_jpAddProdutoMouseClicked
+
+    private void jpCardapioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpCardapioMouseClicked
+        new Cardapio().setVisible(true);
+    }//GEN-LAST:event_jpCardapioMouseClicked
+
+    private void jpSobreMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpSobreMouseClicked
+        new Sobre().setVisible(true);
+    }//GEN-LAST:event_jpSobreMouseClicked
 
     /**
      * @param args the command line arguments
